@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#0E0E0E] text-white ;
+  @apply  text-white h-screen ;
 
 }
