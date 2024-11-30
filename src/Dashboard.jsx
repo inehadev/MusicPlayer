@@ -325,10 +325,11 @@ const Dashboard = () => {
           </div>
 
           <Artist/>
+          
         </div>
 
           {/*-------------------------3rd div------------------------------------------*/}
-        <div className="w-[300px] flex justify-center  bg-custom-gradient    ">
+        <div className="w-[300px] flex justify-center  bg-gradient-to-b from-[#380f0f]  to-black bg-opacity-20  ">
          <Player/>
 
         </div>
