@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, Links } from "react-router-dom";
 import Artist from "./component/Artist";
+import Player from "./component/Player";
 
 const Dashboard = () => {
   return (
     <>
-      <div className="flex h-screen   w-full   ">
+      <div className="flex h-screen    w-full   ">
         {/*-------------------------1st div------------------------------------------*/}
        
-        <div className=" mt-[-40px] bg-custom2 w-[300px] ml-[-70px] ">
+        <div className="  bg-custom2 w-[300px]  ">
           <div className="flex ml-[40px]   h-[50px] mt-10    ">
             <svg
               width="35"
@@ -290,7 +291,7 @@ const Dashboard = () => {
 
         {/*-------------------------2nd div------------------------------------------*/}
 
-        <div className="bg-custom-gradient mt-[-40px] w-[700px]">
+        <div className="bg-custom-gradient  opacity-98  w-[770px]">
           <div className="flex mt-12 ml-2  justify-around ">
             <div className="flex gap-10 ">
               <p>Music</p>
@@ -298,9 +299,9 @@ const Dashboard = () => {
               <p>Live</p>
               <p>Radio</p>
             </div>
-            <div className=" bg-custom3 flex rounded-full px-4 h-8">
+            <div className=" bg-custom3 flex justify-between py-1 rounded-full px-4 h-8">
               <input
-                className="bg-transparent placeholder:text-white placeholder:font-thin"
+                className="bg-transparent placeholder:text-white placeholder:font-thin px-2"
                 type="text"
                 placeholder="michaeljackson"
               />
@@ -310,7 +311,7 @@ const Dashboard = () => {
                 viewBox="0 0 27 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="mt-1 font-thin"
+                className="mt-1 font-thin "
               >
                 <path
                   d="M25.375 25.375L19.9544 19.9448L25.375 25.375ZM22.9583 12.6875C22.9583 15.4115 21.8762 18.0239 19.9501 19.9501C18.0239 21.8763 15.4115 22.9584 12.6875 22.9584C9.9635 22.9584 7.35107 21.8763 5.42491 19.9501C3.49876 18.0239 2.41666 15.4115 2.41666 12.6875C2.41666 9.96353 3.49876 7.3511 5.42491 5.42494C7.35107 3.49879 9.9635 2.41669 12.6875 2.41669C15.4115 2.41669 18.0239 3.49879 19.9501 5.42494C21.8762 7.3511 22.9583 9.96353 22.9583 12.6875V12.6875Z"
@@ -327,7 +328,10 @@ const Dashboard = () => {
         </div>
 
           {/*-------------------------3rd div------------------------------------------*/}
-        <div className="w-[500px] bg-custom2-gradient mt-[-50px]"></div>
+        <div className="w-[300px] flex justify-center  bg-custom-gradient    ">
+         <Player/>
+
+        </div>
       </div>
     </>
   );
