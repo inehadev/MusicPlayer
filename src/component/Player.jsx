@@ -6,7 +6,7 @@ const Player = () => {
       <p className="font-medium"> Now Playing </p>
       <img className="h-32 w-32" src="Pic.svg" alt="" />
       <p>Beat it</p>
-      <p className="text-sm">Michael Jackson</p>
+      <p className="text-sm">Michael Jacksonn</p>
       <div></div>
 
         </div>
