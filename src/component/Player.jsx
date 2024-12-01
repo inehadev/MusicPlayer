@@ -10,6 +10,39 @@ const Player = () => {
 
 const [currentSong , setcurrentSong]=useState(null)
 const [howlinstance , sethowlinstance]=useState(null);
+const [handleDrag , sethandleDrag] = useState(false);
+
+const handleDragOver =(e)=>{
+  e.preventDefault();
+  sethandleDrag(true);
+  
+  
+
+}
+
+const handleDrop= async (e)=>{
+  e.preventDefault();
+  sethandleDrag(false);
+  
+ 
+
+  const { files } = e.dataTransfer;
+  if (files && files.length > 0) {
+      console.log('Dropped Files:', files);
+      for (const file of files) {
+          console.log('File:', file.name, file.type);
+      }
+  } else {
+      console.log('No valid files detected in drop.');
+  };
+
+}
+
+const handleDrageleave=(e)=>{
+  e.preventDefault();
+  sethandleDrag(false);
+ 
+}
 
 const playSong = (song)=>{
   if(howlinstance) howlinstance.stop();
@@ -34,7 +67,7 @@ const nextSong = ()=>{
     <div className="w-[260px] rounded-md flex flex-col justify-center items-center  mt-[55vh] mb-[20vh] h-[280px] bg-custon1">
       <p className="font-medium "> Now Playing </p>
       <div className="h-36 w-44 mt-4">
-        <img className=" h-fit  " src="Pic.svg" alt="" />
+       <div  onDrag={handleDrag} onDragLeave={handleDrageleave} onDragOver={handleDragOver}> <img className=" h-fit  " src="Pic.svg" alt="" /></div>
         <p className="mt-2 text-center">Beat it</p>
         <p className="text-sm text-center">Michael Jacksonn</p>
       </div>

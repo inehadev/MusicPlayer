@@ -1,4 +1,5 @@
 
+import { PlayerProvider } from './context/PlayerContext'
 import Dashboard from './Dashboard'
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
   return (
    
     <>
+    
     <Dashboard/>
+   
     </>
     )  
 }
